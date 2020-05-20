@@ -1,4 +1,13 @@
 import {decode as atob, encode as btoa} from 'base-64';
+const { ApolloClient } = require("apollo-client");
+const { InMemoryCache } = require("apollo-cache-inmemory");
+const { split } = require("apollo-link");
+const { HttpLink } = require("apollo-link-http");
+const { WebSocketLink } = require("apollo-link-ws");
+const { getMainDefinition } = require("apollo-utilities");
+const fetch = require("node-fetch");
+const gql = require("graphql-tag");
+const WebSocket = require("ws");
 exports.onPreInit = () => console.log("Loaded gatsby-starter-plugin")
 
 const axios = require('axios');

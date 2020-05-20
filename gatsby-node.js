@@ -1,6 +1,3 @@
-exports.createPages = ({ actions: { createPage }}) = > {
-    createPage({
-        path: '/blog',
-        component:
-    })
-}
+require = require('esm')(module);
+
+module.exports = require('./gatsby-node.esm.js');

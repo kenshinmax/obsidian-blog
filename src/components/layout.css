@@ -1,12 +1,11 @@
 html {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
 }
 article,
 aside,
@@ -185,7 +184,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em "Roboto", serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,7 +199,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -619,4 +618,92 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/** custom **/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 996px;
+  min-height: 100vh;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+.header {
+  position: relative;
+  display: flex;
+  min-height: 5rem;
+  justify-content: space-between;
+  align-items: stretch;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.header .logo {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  text-decoration: unset;
+}
+.header nav {
+  display: flex;
+  align-items: stretch;
+}
+.header .nav-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0;
+  font-weight: 500;
+  line-height: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+a, button, .text-link {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6 {
+  font-weight: 300;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  font-weight: 300;
+}
+a:not(.logo):not(.nav-link), button:not(.logo):not(.nav-link), .text-link:not(.logo):not(.nav-link) {
+  font-weight: inherit;
+  position: relative;
+}
+a:visited, a:focus, a:hover, button:visited, button:focus, button:hover, .text-link:visited, .text-link:focus, .text-link:hover {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.5rem;
 }

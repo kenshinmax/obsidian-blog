@@ -1,11 +1,15 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "shimmy-blog",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Cliff Sanchez",
   "dependencies": {
+    "axios": "^0.19.2",
+    "base-64": "^0.1.0",
+    "esm": "^3.2.25",
     "gatsby": "^2.20.12",
+    "gatsby-cli": "^2.12.29",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",

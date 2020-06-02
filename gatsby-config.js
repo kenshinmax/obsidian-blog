@@ -8,11 +8,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     require.resolve(`./source-plugin`),
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/src/pages`,
         name: 'project'
       }
     },

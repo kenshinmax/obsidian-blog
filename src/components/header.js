@@ -1,9 +1,13 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { StaticQuery, graphql, Link } from "gatsby";
+import React from "react";
 
-const Header = ({ siteTitle }) => (
-  <header id="header" className="header">
+
+const HeaderBody = ({ data }) => {
+  
+  const siteTitle = data.site.siteMetadata.title;
+ return (
+    
+    <header id="header" className="header">
         <Link to="/" className="logo">
           {siteTitle}
         </Link> 
@@ -15,14 +19,25 @@ const Header = ({ siteTitle }) => (
           <a className="nav-link" href="/demos/vanilla/ipsum/">Ipsum</a>
         </nav>
   </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+ )
+  
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  
+  return (
+    <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `}
+    render={data => <HeaderBody data={data} />}
+  />
+  )
 }
-
-export default Header
+  export default Header;

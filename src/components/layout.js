@@ -1,27 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { graphql, Link } from "gatsby";
+import Header from '../components/header';
 import logo from '../images/shimmy-logo.png';
-import Header from "./header"
-import "./layout.css"
+import placeHolderImg from '../images/gatsby-icon.png';
+import "../sass/main.scss";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ( props ) => {
 
-  return (
-    <>
-     <div className="wrapper"> 
-     
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="container">
+ const { edges } = props.data.allMarkdownRemark;
+ 
+ return (
+   
+      <div className="container">
         <section id="hero" className="hero">
           <img alt="avatar" src={logo}/>
           <div className="copy">
@@ -40,14 +30,32 @@ const Layout = ({ children }) => {
             </p>
           </div>
         </section>
+        <div className="blog-list">
+        {
+          edges.map(edge => {
+            const { frontmatter } = edge.node;
+            return (
+              <div  key={frontmatter.path}>
+                {
+                <Link className="article-teaser" to={frontmatter.path}>
+                   <img className="thumbnail" src={placeHolderImg} alt="Magna etiam sed lorem ipsum dolor amet"></img>
+                    <div className="copy">
+                      <h2> {frontmatter.title}</h2>
+                      <h3 className="publish-date">Published on September 04, 2016</h3>
+                      <p className="summary">Phasellus in ante vitae nibh porttitor tempus vitae ut ante. Vestibulum blandit dolor elementum viverra. Sed quat a diam, aliquet tempus felis. Phasellus et magna vitae nibh porttitor tempus vitae.</p>
+                      <div className="text-link">Read more</div>
+                  </div>
+                </Link>
+               }
+              </div>
+            )
+          }) 
+        }
         </div>
-      </div>
-    </>
+      </div>  
+  
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
-export default Layout
+export default Layout;

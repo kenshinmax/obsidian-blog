@@ -1,22 +1,34 @@
-import React from "react"
-import { Link } from "gatsby"
-
+import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Image from "../components/image";
-import SEO from "../components/seo";
+import Header from "../components/header";
 
-const IndexPage = () => (
-  <Layout>
-     <SEO title="Home" />
-    <h1>Hi people and stuffed animals!</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const IndexPage = ({ data }) => {
+  
+   return (
+    <div className="wrapper"> 
+      <Header/>
+      <Layout data={ data }/>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+   )
  
-)
-
+}
+export const query =  graphql`
+  query HomepageQuery  {
+    allMarkdownRemark(sort: {
+      order: DESC,
+      fields: frontmatter___title
+    }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+          }
+        }
+      }
+    }
+  }
+`
 export default IndexPage;

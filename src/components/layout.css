@@ -707,3 +707,9 @@ a:visited, a:focus, a:hover, button:visited, button:focus, button:hover, .text-l
   align-items: center;
   margin: 0 0 1.5rem;
 }
+.hero img {
+  height: 88px;
+  min-height: 100%;
+  margin: 0 1.5rem 0 0;
+  border-radius: 100%;
+}

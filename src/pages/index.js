@@ -5,11 +5,14 @@ import Header from "../components/header";
 
 const IndexPage = ({ data }) => {
   
-   return (
+   return (   
     <div className="wrapper"> 
-      <Header/>
+     <div>
+      <Header/> 
       <Layout data={ data }/>
-    </div>
+
+     </div>
+   </div>
    )
  
 }

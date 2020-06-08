@@ -1,7 +1,12 @@
 import { StaticQuery, graphql, Link } from "gatsby";
 import React from "react";
 
-
+const navStyles = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "baseline",
+  boxSizing: "border-box"
+}
 const HeaderBody = ({ data }) => {
   
   const siteTitle = data.site.siteMetadata.title;
@@ -11,13 +16,13 @@ const HeaderBody = ({ data }) => {
         <Link to="/" className="logo">
           {siteTitle}
         </Link> 
-
-        <nav>
-          <a className="nav-link" href="/demos/vanilla/">Home</a>
-          <a className="nav-link" href="/demos/vanilla/generic/">Generic</a>
-          <a className="nav-link" href="/demos/vanilla/elements/">Elements</a>
-          <a className="nav-link" href="/demos/vanilla/ipsum/">Ipsum</a>
-        </nav>
+       <div className="nav-wrapper">
+          <nav style={navStyles}>
+            <a className="nav-link" href="/about">About</a>
+            <a className="nav-link" href="/blogs">Blogs</a>
+            <a className="nav-link" href="/photos">Photos</a>
+          </nav>
+        </div>
   </header>
  )
   

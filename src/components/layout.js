@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import Header from '../components/header';
+import { Link } from "gatsby";
 import logo from '../images/shimmy-logo.png';
 import placeHolderImg from '../images/gatsby-icon.png';
 import "../sass/main.scss";
@@ -15,8 +14,8 @@ const Layout = ( props ) => {
         <section id="hero" className="hero">
           <img alt="avatar" src={logo}/>
           <div className="copy">
-            <h1>This is a hero headline.</h1>
-            <h3 id="this-is-a-super-cool-hero-subhead">This is a super-cool hero subhead.</h3>
+            <h1>A collection of items that are interesting</h1>
+            <h3 id="this-is-a-super-cool-hero-subhead">My thoughts about technology, cloud computing and fun stuff</h3>
           </div>
         </section>
         <section id="intro" className="content">

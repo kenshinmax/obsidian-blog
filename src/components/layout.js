@@ -10,12 +10,12 @@ const Layout = ( props ) => {
  
  return (
    
-      <div className="container">
+      <div className="container box">
         <section id="hero" className="hero">
           <img alt="avatar" src={logo}/>
           <div className="copy">
-            <h1>A collection of items that are interesting</h1>
-            <h3 id="this-is-a-super-cool-hero-subhead">My thoughts about technology, cloud computing and fun stuff</h3>
+            <h1>A collection of blogs and other things</h1>
+            <h3 id="this-is-a-super-cool-hero-subhead">My thoughts about technology, cloud computing and other stuff</h3>
           </div>
         </section>
         <section id="intro" className="content">

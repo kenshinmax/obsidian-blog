@@ -7,8 +7,9 @@ const IndexPage = ({ data }) => {
   
    return (   
     <div className="wrapper"> 
-     <div>
-      <Header/> 
+    <Header/> 
+     <div className="main">
+      
       <Layout data={ data }/>
 
      </div>

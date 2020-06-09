@@ -11,13 +11,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     require.resolve(`./source-plugin`),
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'project'
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

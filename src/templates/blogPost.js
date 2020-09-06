@@ -24,7 +24,7 @@ const heroImageStyle = {
 };
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark } = data;
-  const title = markdownRemark.frontmatter.title;
+  const {title, subtitle} = markdownRemark.frontmatter;
   const html = markdownRemark.html;
   const { next, prev } = pageContext;
 

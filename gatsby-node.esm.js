@@ -49,6 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               path
               title
+              subtitle
             }
           }
         }

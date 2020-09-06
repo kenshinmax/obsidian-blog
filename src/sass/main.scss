@@ -3,6 +3,7 @@
 
 $font-stack: Roboto, sans-serif;
 $font-weight-bold: 600;
+$font-size: 1.25em;
 $margin-top: 38.4px;
 
 $breakpoints: (
@@ -89,7 +90,9 @@ button,
 }
 .hero h1,
 .hero h2,
-.hero h3,
+.hero h3 {
+  font-weight: 600;
+}
 .hero h4,
 .hero h5,
 .hero h6 {
@@ -224,7 +227,7 @@ h1 {
     font-size: 44px;
 }
 .box p {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .image-wrapper {
   overflow: hidden;

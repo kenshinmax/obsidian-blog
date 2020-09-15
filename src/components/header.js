@@ -5,7 +5,8 @@ const navStyles = {
   display: "flex",
   flexDirection: "row",
   alignItems: "baseline",
-  boxSizing: "border-box"
+  boxSizing: "border-box",
+  marginTop: "0.9em"
 }
 const HeaderBody = ({ data }) => {
   

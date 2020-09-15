@@ -2,16 +2,23 @@
 path: "/building-react-apps-for-liferay"
 date: "2020-05-15"
 title: "Build React Apps for Liferay DXP" 
-subtitle: "Tips for "
-tags: ['react', 'Liferay']
-excerpt: "A preview of my first post" 
+subtitle: "Tips for creating React apps for Liferay DXP"
+tags: ['react', 'Liferay', 'DXP']
+excerpt: "Build apps for Liferay DXP" 
 ---
 
-For sometime now, I have been facinated with modern Javascript frameworks, especially React because they help me quickly and easily transform my ideas into small applications.
+Modern Javascript frameworks like React can help you quickly and easily create any type of application, from a simple Todo app to a more complex customer portal solution with personalized content and role-based access.
 
-In addition, I recently started working with Liferay DXP (Digital Experience Platform) which provides REST and GraphQL APIs for Headless capabilities.  So naturally, I thought it would be interesting to create an application in React and have it connect to Liferay DXP and make it available within the Liferay user-interface.
+Now, in some cases, you may need to surface data from other systems within your application, for example: If your customer portal has a dashboard and you need to show tasks for a given users that live in an HR system.  Of course, you could create logic within React to make API calls, but then you would have to maintain this over time.
 
-In this project, we will take a look at:
+As an alternative, you could leverage a platform like Liferay DXP, which is an enterprise PaaS solution, as an integration hub.  In this scenario, all of the integration logic would be managed at the platform level that is already integrated with SSO for security, appliying the proper roles and permissions per user.  This includes personalized interactions, like targeted content, access to sites, etc.
+
+So in this article, we will take a look at working with Liferay DXP (Digital Experience Platform) and incorporate a simple React application to display HR Tasks.
+
+
+which provides REST and GraphQL APIs. 
+
+In this project, we will take a look at how to create a React project
 <ol>
 <li> Liferay Yeoman generator </li>
 <li> Building a Liferay React JS Widget </li>

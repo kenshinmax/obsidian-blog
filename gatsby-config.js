@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/my_project",
+  pathPrefix: "/obsidian-blog",
   siteMetadata: {
     title: `Just Vanilla`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,

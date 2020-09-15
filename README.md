@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="#">
-    <img alt="Shimmy" src="https://github.com/kenshinmax/obsidian-blog/blob/master/images/shimmy-logo.png" width="60" />
+    <img alt="Shimmy" src="https://github.com/kenshinmax/obsidian-blog/blob/master/images/shimmy-logo.png" width="50%" />
   </a>
 </p>
 <h1 align="center">

@@ -22,7 +22,7 @@ const Layout = ( props ) => {
           <div className="copy">
             <p>Working with technolgy platforms can help you do all types of things, like offer a new service,
                provide a variation to an existing service or help you create something cool like an app for Alexa
-               keep track of your favorite Legos (done!).
+               to keep track of your favorite Legos (done!).
            </p>
             <h3 id="this-is-an-h3-use-it-for-subheads-and-subsections">
                 Here are a couple of articles that might help you create something.

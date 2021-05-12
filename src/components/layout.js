@@ -34,7 +34,7 @@ const Layout = ( props ) => {
         {
           edges.map(edge => {
             const { frontmatter } = edge.node;
-            console.log(frontmatter);
+            //console.log(frontmatter);
             return (
               <div  key={frontmatter.path}>
                 {

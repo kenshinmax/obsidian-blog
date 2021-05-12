@@ -163,8 +163,7 @@ button:hover,
   flex: 1 0 auto;
   width: 40%;
   height: auto;
-  max-width: 270px;
-  max-height: 270px;
+  max-width: 80px;
   margin: 0 1.5rem 0 0;
 }
 .article-teaser .publish-date {
@@ -218,7 +217,7 @@ h1 {
   margin: 3rem auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .box h1 { 
     margin-top: 1em;
@@ -230,6 +229,11 @@ h1 {
 }
 .box p {
   font-size: 1.5rem;
+}
+.blog-list{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 .image-wrapper {
   overflow: hidden;

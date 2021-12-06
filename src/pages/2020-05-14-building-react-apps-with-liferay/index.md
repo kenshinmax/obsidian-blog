@@ -13,7 +13,7 @@ Now, in some cases, you may need to surface data from other systems within your 
 
 As an alternative, you could leverage a platform like Liferay DXP, which is an enterprise PaaS solution, as an integration hub.  In this scenario, all of the integration logic would be managed at the platform level that is already integrated with SSO for security, appliying the proper roles and permissions per user.  This includes personalized interactions, like targeted content, access to sites, etc.
 
-So in this article, we will take a look at working with Liferay DXP (Digital Experience Platform) and incorporate a simple React application to display Tasks.
+In this article, we will take a look at how easy it is to incorporate a React App into Liferay DXP (Digital Experience Platform) and make it available to end users.
 
 First, let's use the Liferay Yeoman Generator to create a React Project.
 ### Installation

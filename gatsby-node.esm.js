@@ -1,5 +1,4 @@
-import {decode as atob, encode as btoa} from 'base-64';
-import { graphql } from 'gatsby';
+
 const path = require('path')
 const axios = require('axios');
 

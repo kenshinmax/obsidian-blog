@@ -4,7 +4,8 @@ date: "2020-05-15"
 title: "Build React Apps for Liferay DXP" 
 subtitle: "Tips for creating React apps for Liferay DXP"
 tags: ['react', 'Liferay', 'DXP']
-excerpt: "Build apps for Liferay DXP" 
+excerpt: "Build apps for Liferay DXP"
+featuredImage: og-react.jpg 
 ---
 
 Modern Javascript frameworks like React can help you quickly and easily create any type of application, from a simple Todo app to a more complex customer portal solution with personalized content and role-based access.

@@ -29,6 +29,13 @@ export const query =  graphql`
             title
             path
             date
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Header from "../components/header";
-import heroImage from "../images/og-react.jpg";
+import Img from "gatsby-image";
 
 const heroStyles = {
   width: "100%",
@@ -25,18 +25,19 @@ const heroImageStyle = {
 const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark } = data;
   const {title, subtitle} = markdownRemark.frontmatter;
+  let  featuredImgFluid   = markdownRemark.frontmatter.featuredImage.childImageSharp.fluid;
   const html = markdownRemark.html;
-  const { next, prev } = pageContext;
+  const { next, prev } = pageContext; 
 
   return (
     <div className="wrapper">
       <Header />
       <div className="box container">
-        <div className="image-wrapper">
-          <picture>
-            <img id="hero-image" style={heroImageStyle} src={heroImage} />
-          </picture>
-        </div>
+       
+          
+            <Img style={heroImageStyle} fluid ={featuredImgFluid} />
+          
+       
         <h1>{title}</h1>
         <div className="blog-hero" />
         <section id="hero" className="hero">
@@ -70,6 +71,13 @@ export const query = graphql`
       html
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
